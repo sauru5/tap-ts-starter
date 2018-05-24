@@ -7,7 +7,8 @@
  */ /** hack for https://github.com/TypeStrong/typedoc/issues/603 */
 
 import getFile = require('./s3-getfile')
-
+import parsexml = require('./parse-xml')
+import { parse } from 'querystring'
 // response object for Lambda Proxy integration; see https://serverless.com/framework/docs/providers/aws/events/apigateway/
 class lambdaResponse {
   statusCode: number = 200
